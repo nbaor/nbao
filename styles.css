@@ -1,1 +1,68 @@
+body {
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  background: url('background.jpg') no-repeat center/cover;
+  color: white;
+}
 
+/* lớp phủ tối */
+.overlay {
+  background: rgba(0,0,0,0.6);
+  min-height: 100vh;
+}
+
+/* navbar */
+.navbar {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  padding: 20px;
+  background: rgba(0,0,0,0.7);
+  position: sticky;
+  top: 0;
+}
+
+.navbar a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.navbar a:hover {
+  color: #38bdf8;
+}
+
+/* section */
+section {
+  padding: 80px 20px;
+  text-align: center;
+}
+
+h1 {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 40px;
+}
+
+/* button */
+.btn {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 12px 20px;
+  background: #3b82f6;
+  border-radius: 10px;
+  text-decoration: none;
+  color: white;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background: #2563eb;
+}
+
+/* ảnh */
+img {
+  width: 200px;
+  border-radius: 15px;
+  margin-top: 20px;
+}
