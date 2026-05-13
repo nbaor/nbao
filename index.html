@@ -4,51 +4,35 @@
   <meta charset="UTF-8">
   <title>Bảo</title>
 
-  <!-- CSS -->
   <link rel="stylesheet" href="styles.css">
 
-  <!-- Font -->
   <link href="https://fonts.googleapis.com/css2?family=Orbitron&family=Inter&display=swap" rel="stylesheet">
 </head>
 
 <body>
 
-<div class="overlay">
+<div class="noise"></div>
 
-  <!-- MENU -->
-  <div class="navbar">
-    <a href="#about">About</a>
-    <a href="#taste">Taste</a>
-    <a href="#photos">Photos</a>
-    <a href="#projects">Projects</a>
-  </div>
+<nav class="navbar">
+  <a href="#about">About</a>
+  <a href="#projects">Projects</a>
+  <a href="#photos">Photos</a>
+</nav>
 
-  <!-- ABOUT -->
-  <section id="about">
-    <h1>👋 Xin chào</h1>
-    <p>Mình là Bảo</p>
-    <a href="https://facebook.com" target="_blank" class="btn">Facebook</a>
-  </section>
+<section id="about" class="fade">
+  <h1>Xin chào</h1>
+  <p>Mình là Bảo</p>
+</section>
 
-  <!-- TASTE -->
-  <section id="taste">
-    <h1>🎧 Gu của mình</h1>
-    <p>Nhạc, game, coding...</p>
-  </section>
+<section id="projects" class="fade">
+  <h1>Dự án</h1>
+  <p>Web cá nhân</p>
+</section>
 
-  <!-- PHOTOS -->
-  <section id="photos">
-    <h1>📸 Ảnh</h1>
-    <img src="avatar.jpg">
-  </section>
-
-  <!-- PROJECTS -->
-  <section id="projects">
-    <h1>🚀 Dự án</h1>
-    <p>Website cá nhân đầu tiên</p>
-  </section>
-
-</div>
+<section id="photos" class="fade">
+  <h1>Ảnh</h1>
+  <img src="avatar.jpg">
+</section>
 
 <script src="script.js"></script>
 
