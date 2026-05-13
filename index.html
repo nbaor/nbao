@@ -1,27 +1,123 @@
 <!DOCTYPE html>
-<html>
+<html lang="vi">
 <head>
-  <title>Trang cá nhân</title>
   <meta charset="UTF-8">
+  <title>Bảo</title>
+
+  <!-- Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron&family=Inter&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+      background: url('https://images.unsplash.com/photo-1503264116251-35a269479413') no-repeat center/cover;
+      color: white;
+    }
+
+    /* overlay tối */
+    .overlay {
+      background: rgba(0,0,0,0.6);
+      min-height: 100vh;
+    }
+
+    /* navbar */
+    .navbar {
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      padding: 20px;
+      background: rgba(0,0,0,0.7);
+      position: sticky;
+      top: 0;
+    }
+
+    .navbar a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+
+    .navbar a:hover {
+      color: #38bdf8;
+    }
+
+    /* section */
+    section {
+      padding: 80px 20px;
+      text-align: center;
+    }
+
+    h1 {
+      font-family: 'Orbitron', sans-serif;
+      font-size: 40px;
+    }
+
+    /* button */
+    .btn {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 12px 20px;
+      background: #3b82f6;
+      border-radius: 10px;
+      text-decoration: none;
+      color: white;
+      transition: 0.3s;
+    }
+
+    .btn:hover {
+      background: #2563eb;
+    }
+
+    /* ảnh */
+    img {
+      width: 200px;
+      border-radius: 15px;
+      margin-top: 20px;
+    }
+
+  </style>
 </head>
-<body style="
-  background-image: url('background');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  color: white;
-  text-align: center;
-  font-family: Arial;
-">
 
-  <h1>Annyeonghaseyo, Ohaiyo, Xin chào, Helloooooo</h1>
-  <h2>Mình là Nbao</h2>
+<body>
 
-  <p>Và đây là Bầu trời trong mơ của Nbao - nơi những plan của Nbao được thực hiện</p>
+<div class="overlay">
 
-  <a href="https://facebook.com" target="_blank">
-    👉 Facebook của mình
-  </a>
+  <!-- MENU -->
+  <div class="navbar">
+    <a href="#about">About</a>
+    <a href="#taste">Taste</a>
+    <a href="#photos">Photos</a>
+    <a href="#projects">Projects</a>
+  </div>
+
+  <!-- ABOUT -->
+  <section id="about">
+    <h1>👋 Xin chào</h1>
+    <p>Mình là Bảo</p>
+    <a href="https://facebook.com" target="_blank" class="btn">Facebook</a>
+  </section>
+
+  <!-- TASTE -->
+  <section id="taste">
+    <h1>🎧 Gu của mình</h1>
+    <p>Nhạc, game, coding...</p>
+  </section>
+
+  <!-- PHOTOS -->
+  <section id="photos">
+    <h1>📸 Ảnh</h1>
+    <img src="https://via.placeholder.com/200">
+  </section>
+
+  <!-- PROJECTS -->
+  <section id="projects">
+    <h1>🚀 Dự án</h1>
+    <p>Website cá nhân đầu tiên</p>
+  </section>
+
+</div>
 
 </body>
 </html>
