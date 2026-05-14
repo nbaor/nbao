@@ -62,3 +62,7 @@ slider.addEventListener("input", () => {
   else if (slider.value < 0.5) icon.textContent = "🔉";
   else icon.textContent = "🔊";
 });
+
+document.body.addEventListener("click", () => {
+  music.play();
+}, { once: true });
