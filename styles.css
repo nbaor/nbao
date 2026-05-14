@@ -105,7 +105,7 @@ section {
 .hero-text .section-label { margin-bottom: 0.75rem; }
 
 .hero-text h1 {
-  font-family: 'Special Elite', cursive;
+  font-family: 'VT323', monospace;
   font-size: clamp(2.5rem, 5vw, 4.5rem);
   line-height: 1.1;
   letter-spacing: -0.02em;
