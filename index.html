@@ -76,101 +76,6 @@ nav ul a:hover {
   color: var(--rust);
 }
 
-/* ===== VOLUME CONTROL ===== */
-.volume-control {
-  justify-self: center;
-  display: flex;
-  align-items: center;
-  gap: 10px;
-
-  background: #dad7cdcc;
-  border: 1px solid var(--sepia);
-  padding: 6px 12px;
-  border-radius: 20px;
-
-  backdrop-filter: blur(6px);
-}
-
- /* hover → hiện ra */
-.volume-control:hover #volume-slider {
-  transform: scaleX(1);
-  opacity: 1;
-}
- 
-/* slider chính */
-#volume-slider {
-  -webkit-appearance: none;
-  appearance: none;
-
-  width: 90px;
-  height: 4px;
-  background: var(--rust);
-  border-radius: 2px;
-
-  transform: scaleX(0);
-  transform-origin: left;
-  opacity: 0;
-
-  transition: 0.3s ease;
-  cursor: pointer;
-}
-
-
-/* track (chrome) */
-#volume-slider::-webkit-slider-runnable-track {
-  height: 4px;
-  background: var(--rust);
-  border-radius: 2px;
-}
-
-/* 🎧 THUMB = ĐĨA VINYL */
-#volume-slider::-webkit-slider-thumb {
-  -webkit-appearance: none;
-  appearance: none;
-
-  width: 18px;
-  height: 18px;
-  margin-top: -7px;
-
-  background: radial-gradient(circle at center,
-    #111 25%,
-    #333 45%,
-    #000 65%,
-    #111 80%
-  );
-
-  border-radius: 50%;
-  border: 2px solid #222;
-
-  cursor: pointer;
-}
-
-/* Firefox */
-#volume-slider::-moz-range-thumb {
-  width: 18px;
-  height: 18px;
-
-  background: radial-gradient(circle,
-    #111 25%,
-    #333 45%,
-    #000 65%
-  );
-
-  border-radius: 50%;
-  border: 2px solid #222;
-  cursor: pointer;
-}
-
-/* icon */
-#volume-icon {
-  font-size: 14px;
-  color: var(--rust);
-  transition: 0.2s;
-}
-
-.volume-control:hover #volume-icon {
-  color: black;
-}
 
   /* ── HERO ── */
   .hero {
@@ -624,9 +529,6 @@ nav ul a:hover {
 </section>
 
  <!-- ── END ── -->
-<audio id="bg-music" loop>
-  <source src="bgmusic" type="audio/mpeg">
-</audio>
 <footer>
   <div>made by nbaor © 2026</div>
   <div class="cassette">
