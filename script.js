@@ -42,27 +42,5 @@ document.querySelectorAll('.project-card').forEach(card => {
   card.addEventListener('click', () => {
     const url = card.dataset.url;
     if (url) window.open(url, '_blank');
-  });
-  
+  }); 
 });
-
-const music = document.getElementById("bg-music");
-const slider = document.getElementById("volume-slider");
-
-const music = document.getElementById("bg-music");
-const slider = document.getElementById("volume-slider");
-const icon = document.getElementById("volume-icon");
-
-music.volume = slider.value;
-
-slider.addEventListener("input", () => {
-  music.volume = slider.value;
-
-  if (slider.value == 0) icon.textContent = "🔇";
-  else if (slider.value < 0.5) icon.textContent = "🔉";
-  else icon.textContent = "🔊";
-});
-
-document.body.addEventListener("click", () => {
-  music.play();
-}, { once: true });
