@@ -83,7 +83,7 @@ nav ul a:hover {
   align-items: center;
   gap: 10px;
 
-  background: #ffffffcc;
+  background: #dad7cd;
   border: 1px solid var(--sepia);
   padding: 6px 10px;
   border-radius: 20px;
@@ -94,11 +94,24 @@ nav ul a:hover {
   overflow: hidden;
 }
 
-/* hiệu ứng thụt vào */
-#volume-slider {
-  width: 0;
-  opacity: 0;
-  transition: all 0.3s ease;
+#volume-slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+
+  width: 18px;
+  height: 18px;
+  margin-top: -7px;
+
+  background: radial-gradient(circle at center,
+    #111 30%,
+    #333 45%,
+    #000 60%,
+    #111 70%
+  );
+
+  border-radius: 50%;
+  border: 2px solid #222;
+
   cursor: pointer;
 }
 
