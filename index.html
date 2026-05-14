@@ -25,7 +25,6 @@
     overflow-x: hidden;
   }
 
-  /* ── NAV ── */
  /* ── NAV ── */
 nav {
   position: fixed;
@@ -77,13 +76,78 @@ nav ul a:hover {
   color: var(--rust);
 }
 
-/* volume */
+/* container */
 .volume-control {
   justify-self: center;
   display: flex;
   align-items: center;
-  gap: 8px;
-  font-family: 'Space Mono', monospace;
+  gap: 10px;
+
+  background: #ffffffcc;
+  border: 1px solid var(--sepia);
+  padding: 6px 10px;
+  border-radius: 20px;
+
+  backdrop-filter: blur(6px);
+
+  transition: all 0.3s ease;
+  overflow: hidden;
+}
+
+/* hiệu ứng thụt vào */
+#volume-slider {
+  width: 0;
+  opacity: 0;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+/* hover → trượt ra */
+.volume-control:hover #volume-slider {
+  width: 100px;
+  opacity: 1;
+}
+
+/* TRACK */
+#volume-slider::-webkit-slider-runnable-track {
+  height: 4px;
+  background: var(--rust);
+  border-radius: 2px;
+}
+
+/* THUMB = ĐĨA VINYL */
+#volume-slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 18px;
+  height: 18px;
+  margin-top: -7px;
+
+  background: radial-gradient(circle at center, #111 40%, #333 60%, #000 100%);
+  border-radius: 50%;
+  border: 2px solid #222;
+
+  cursor: pointer;
+}
+
+/* Firefox */
+#volume-slider::-moz-range-thumb {
+  width: 18px;
+  height: 18px;
+  background: radial-gradient(circle, #111 40%, #333 60%, #000);
+  border-radius: 50%;
+  border: 2px solid #222;
+}
+
+/* icon */
+#volume-icon {
+  font-size: 14px;
+  color: var(--rust);
+  transition: 0.2s;
+}
+
+/* hover sáng hơn */
+.volume-control:hover #volume-icon {
+  color: black;
 }
 
   /* ── HERO ── */
