@@ -44,3 +44,13 @@ document.querySelectorAll('.project-card').forEach(card => {
     if (url) window.open(url, '_blank');
   });
 });
+const music = document.getElementById("bg-music");
+const slider = document.getElementById("volume-slider");
+
+// set volume ban đầu
+music.volume = slider.value;
+
+// chỉnh volume
+slider.addEventListener("input", () => {
+  music.volume = slider.value;
+});
