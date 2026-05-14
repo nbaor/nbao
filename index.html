@@ -26,7 +26,8 @@
   }
 
   /* ── NAV ── */
- nav {
+ /* ── NAV ── */
+nav {
   position: fixed;
   top: 0; left: 0; right: 0;
   z-index: 100;
@@ -38,17 +39,51 @@
   padding: 1rem 2rem;
   background: var(--cream);
   border-bottom: 1px solid var(--faded);
-  nav .logo {
-  justify-self: start;
+
+  font-family: 'Space Mono', monospace; /* FIX FONT */
 }
 
+/* logo */
+nav .logo {
+  justify-self: start;
+  font-family: 'Special Elite', cursive;
+  font-size: 1rem;
+  text-decoration: none;
+  color: var(--dark);
+  letter-spacing: 0.05em;
+}
+
+/* menu */
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+  justify-self: end;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul a {
+  text-decoration: none;
+  color: var(--sepia);
+  font-size: 0.75rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  transition: color 0.2s;
+  font-family: 'Space Mono', monospace; /* FIX FONT */
+}
+
+nav ul a:hover {
+  color: var(--rust);
+}
+
+/* volume */
 .volume-control {
   justify-self: center;
-}
-
-nav ul {
-  justify-self: end;
-}
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-family: 'Space Mono', monospace;
 }
 
   /* ── HERO ── */
