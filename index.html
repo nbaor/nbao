@@ -76,24 +76,53 @@ nav ul a:hover {
   color: var(--rust);
 }
 
-/* container */
+/* ===== VOLUME CONTROL ===== */
 .volume-control {
   justify-self: center;
   display: flex;
   align-items: center;
   gap: 10px;
 
-  background: #dad7cd;
+  background: #dad7cdcc;
   border: 1px solid var(--sepia);
-  padding: 6px 10px;
+  padding: 6px 12px;
   border-radius: 20px;
 
   backdrop-filter: blur(6px);
-
-  transition: all 0.3s ease;
-  overflow: hidden;
 }
 
+/* slider chính */
+#volume-slider {
+  -webkit-appearance: none;
+  appearance: none;
+
+  width: 90px;
+  height: 4px;
+  background: var(--rust);
+  border-radius: 2px;
+
+  transform: scaleX(0);
+  transform-origin: left;
+  opacity: 0;
+
+  transition: 0.3s ease;
+  cursor: pointer;
+}
+
+/* hover → hiện ra */
+.volume-control:hover #volume-slider {
+  transform: scaleX(1);
+  opacity: 1;
+}
+
+/* track (chrome) */
+#volume-slider::-webkit-slider-runnable-track {
+  height: 4px;
+  background: var(--rust);
+  border-radius: 2px;
+}
+
+/* 🎧 THUMB = ĐĨA VINYL */
 #volume-slider::-webkit-slider-thumb {
   -webkit-appearance: none;
   appearance: none;
@@ -103,39 +132,12 @@ nav ul a:hover {
   margin-top: -7px;
 
   background: radial-gradient(circle at center,
-    #111 30%,
+    #111 25%,
     #333 45%,
-    #000 60%,
-    #111 70%
+    #000 65%,
+    #111 80%
   );
 
-  border-radius: 50%;
-  border: 2px solid #222;
-
-  cursor: pointer;
-}
-
-/* hover → trượt ra */
-.volume-control:hover #volume-slider {
-  width: 100px;
-  opacity: 1;
-}
-
-/* TRACK */
-#volume-slider::-webkit-slider-runnable-track {
-  height: 4px;
-  background: var(--rust);
-  border-radius: 2px;
-}
-
-/* THUMB = ĐĨA VINYL */
-#volume-slider::-webkit-slider-thumb {
-  -webkit-appearance: none;
-  width: 18px;
-  height: 18px;
-  margin-top: -7px;
-
-  background: radial-gradient(circle at center, #111 40%, #333 60%, #000 100%);
   border-radius: 50%;
   border: 2px solid #222;
 
@@ -146,9 +148,16 @@ nav ul a:hover {
 #volume-slider::-moz-range-thumb {
   width: 18px;
   height: 18px;
-  background: radial-gradient(circle, #111 40%, #333 60%, #000);
+
+  background: radial-gradient(circle,
+    #111 25%,
+    #333 45%,
+    #000 65%
+  );
+
   border-radius: 50%;
   border: 2px solid #222;
+  cursor: pointer;
 }
 
 /* icon */
@@ -158,7 +167,6 @@ nav ul a:hover {
   transition: 0.2s;
 }
 
-/* hover sáng hơn */
 .volume-control:hover #volume-icon {
   color: black;
 }
