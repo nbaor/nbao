@@ -43,14 +43,22 @@ document.querySelectorAll('.project-card').forEach(card => {
     const url = card.dataset.url;
     if (url) window.open(url, '_blank');
   });
+  
 });
+
 const music = document.getElementById("bg-music");
 const slider = document.getElementById("volume-slider");
 
-// set volume ban đầu
+const music = document.getElementById("bg-music");
+const slider = document.getElementById("volume-slider");
+const icon = document.getElementById("volume-icon");
+
 music.volume = slider.value;
 
-// chỉnh volume
 slider.addEventListener("input", () => {
   music.volume = slider.value;
+
+  if (slider.value == 0) icon.textContent = "🔇";
+  else if (slider.value < 0.5) icon.textContent = "🔉";
+  else icon.textContent = "🔊";
 });
