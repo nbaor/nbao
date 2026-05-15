@@ -264,13 +264,13 @@ nav ul a:hover {
     height: 100%;
     background-size: cover;
     background-position: center;
-    transition: transform 0.5s ease, opacity 0.3s ease;
-    opacity: 0.3; 
+    transition: transform 0.5s ease, filter 0.3s ease;
+    filter: blur(4px);; 
   }
 
   .photo-card:hover .photo-bg { 
     transform: scale(1.05);
-    opacity: 1;
+    filter: blur(0px);;
   }
 
   .photo-card .photo-meta {
